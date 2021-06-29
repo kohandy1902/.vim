@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme codedark
 
 syntax enable
 
