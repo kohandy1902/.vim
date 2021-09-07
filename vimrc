@@ -1,4 +1,4 @@
-colorscheme codedark
+colorscheme onedark
 
 syntax enable
 
