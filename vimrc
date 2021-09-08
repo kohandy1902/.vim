@@ -29,6 +29,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
 
+set viminfo+=n~/.vim/.viminfo
+
 let mapleader=","
 
 inoremap jk <Esc>
