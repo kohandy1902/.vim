@@ -1,3 +1,14 @@
+call plug#begin('~/.vim/plugged')
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+call plug#end()
+
 colorscheme onedark
 
 syntax enable
@@ -35,3 +46,5 @@ let mapleader=","
 
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+:set noshowmode
