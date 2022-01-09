@@ -43,7 +43,7 @@ let mapleader=","
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-:set noshowmode
+set noshowmode
 
 "" for vim-lsp autocomplete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
