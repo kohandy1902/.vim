@@ -13,10 +13,6 @@ colorscheme onedark
 
 syntax enable
 
-set tabstop=4
-set softtabstop=4
-set expandtab
-
 set number
 set showcmd
 set cursorline
@@ -48,3 +44,17 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 :set noshowmode
+
+"" for vim-lsp autocomplete
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+"" default tab settings
+set tabstop=4
+set softtabstop=4
+set expandtab
+
+"" tab settings for some extensions
+autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2
+autocmd FileType scala setlocal shiftwidth=2 softtabstop=2
