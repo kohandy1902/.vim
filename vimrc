@@ -51,6 +51,8 @@ set noshowmode
 
 nnoremap <Leader>nt :NERDTree<CR>
 
+set splitright
+
 "" for vim-lsp autocomplete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
