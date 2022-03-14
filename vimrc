@@ -5,12 +5,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
 
     Plug 'preservim/nerdtree'
-
+    
     Plug 'prabirshrestha/vim-lsp'
     Plug 'mattn/vim-lsp-settings'
-
     Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+    Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 colorscheme onedark
@@ -52,6 +53,28 @@ set noshowmode
 nnoremap <Leader>nt :NERDTree<CR>
 
 set splitright
+
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ":t"
+
+set hidden
+
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>q :bp<BAR> bd #<CR>
+
+" LSP settings
+
+" for ctrl-p
+let g:ctrlp_custom_ignore = {
+    \ 'dir': '\v[\/](\.(git|hg|svn)|\_site)$',
+    \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$'
+\}
+
+let g:ctrlp_working_path_mode = 'r'
+nmap <leader>p :CtrlP<CR>
+
 
 "" for vim-lsp autocomplete
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
