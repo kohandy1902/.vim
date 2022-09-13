@@ -10,11 +10,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/vim-lsp-settings'
     Plug 'prabirshrestha/asyncomplete.vim'
     Plug 'prabirshrestha/asyncomplete-lsp.vim'
-    Plug 'jackguo380/vim-lsp-cxx-highlight'
+    Plug 'bfrg/vim-cpp-modern'
+    Plug 'rhysd/vim-clang-format'
 
     Plug 'junegunn/rainbow_parentheses.vim'
-
-    Plug 'ctrlpvim/ctrlp.vim'
+    Plug 'junegunn/fzf'
 call plug#end()
 
 colorscheme onedark
@@ -53,13 +53,14 @@ set viminfo+=n~/.vim/.viminfo
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-set noshowmode
-
-nnoremap <Leader>nt :NERDTree<CR>
-
 set splitright
 
-" for vim-airline
+set noshowmode
+
+" NERDTree settings
+nnoremap <Leader>nt :NERDTree<CR>
+
+" vim-airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ":t"
 
@@ -69,37 +70,12 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>q :bp<BAR> bd #<CR>
 
-" LSP settings
-if executable('ccls')
-   au User lsp_setup call lsp#register_server({
-      \ 'name': 'ccls',
-      \ 'cmd': {server_info->['ccls']},
-      \ 'root_uri': {server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'compile_commands.json'))},
-      \ 'initialization_options': {
-      \   'highlight': { 'lsRanges' : v:true },
-      \ },
-      \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp', 'cc'],
-      \ })
-endif
-
-let g:lsp_settings_filetype_c = ['ccls', 'clangd']
-
-" for ctrl-p
-let g:ctrlp_custom_ignore = {
-    \ 'dir': '\v[\/](\.(git|hg|svn)|\_site)$',
-    \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$'
-\}
-
-let g:ctrlp_working_path_mode = 'r'
-nmap <leader>p :CtrlP<CR>
-
-
-" for vim-lsp autocomplete
+" vim-lsp autocomplete settings
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 
-" for rainbow parentheses
+" rainbow parentheses settings
 augroup rainbow_c
     autocmd!
     autocmd FileType c,cpp,objc RainbowParentheses
@@ -107,12 +83,19 @@ augroup END
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
+" FZF settings
+nmap <leader>p <C-p>
+
 " default tab settings
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 
 " tab settings for some extensions
 autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2
 autocmd FileType scala setlocal shiftwidth=2 softtabstop=2
+
+" enable local config
+set exrc
 
