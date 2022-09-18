@@ -87,7 +87,7 @@ autocmd FileType scala setlocal shiftwidth=2 softtabstop=2
 
 set incsearch
 set hlsearch
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><space> :nohlsearch<cr>
 
 " moves
 " ----------------------------------------------------------------------------
@@ -102,8 +102,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
 
-inoremap jk <Esc>
-inoremap kj <Esc>
+inoremap jk <esc>
+inoremap kj <esc>
 
 
 " ============================================================================== 
@@ -112,7 +112,7 @@ inoremap kj <Esc>
 
 " NERDTree settings
 " ----------------------------------------------------------------------------
-nnoremap <Leader>nt :NERDTree<CR>
+nnoremap <leader>nt :NERDTree<cr>
 
 
 " vim-airline settings
@@ -122,16 +122,16 @@ let g:airline#extensions#tabline#fnamemod = ":t"
 
 set hidden
 
-nmap <leader>l :bnext<CR>
-nmap <leader>h :bprevious<CR>
-nmap <leader>q :bp<BAR> bd #<CR>
+nmap <leader>l :bnext<cr>
+nmap <leader>h :bprevious<cr>
+nmap <leader>q :bp<bar> bd #<cr>
 
 
 " vim-lsp autocomplete settings
 " ----------------------------------------------------------------------------
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+inoremap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<c-y>" : "\<cr>"
 
 
 " rainbow parentheses settings
