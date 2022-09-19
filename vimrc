@@ -52,6 +52,7 @@ set viminfo+=n~/.vim/.viminfo
 " enable local config
 set exrc
 
+let mapleader=","
 
 " appearance
 " ----------------------------------------------------------------------------
@@ -91,8 +92,6 @@ nnoremap <leader><space> :nohlsearch<cr>
 
 " moves
 " ----------------------------------------------------------------------------
-let mapleader=","
-
 set foldenable
 set foldlevelstart=7
 set foldnestmax=10
