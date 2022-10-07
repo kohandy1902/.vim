@@ -70,9 +70,10 @@ set wildmenu
 
 set lazyredraw
 set showmatch
-set splitright
 set noshowmode
 
+set splitright
+command Bterm botright terminal
 
 " editing
 " ----------------------------------------------------------------------------
