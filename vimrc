@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
     " Editing
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
 
 
     " Browsing
