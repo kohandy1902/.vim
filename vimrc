@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 
     " Browsing
     Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
     Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 
 
@@ -147,5 +148,5 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 
 " FZF settings
 " ----------------------------------------------------------------------------
-nmap <leader>p :FZF<cr>
+nmap <leader>p :FZF
 
