@@ -3,10 +3,6 @@
 " ============================================================================== 
 
 call plug#begin('~/.vim/plugged')
-    " Color
-    Plug 'joshdick/onedark.vim'
-
-
     " Editing
     Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-surround'
