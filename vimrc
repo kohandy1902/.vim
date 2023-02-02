@@ -101,7 +101,6 @@ nnoremap k gk
 nnoremap gV `[v`]
 
 inoremap jk <esc>
-inoremap kj <esc>
 
 
 " ============================================================================== 
