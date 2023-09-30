@@ -34,6 +34,9 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+    " Terminal
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " ==============================================================================
@@ -71,7 +74,6 @@ set showmatch
 set noshowmode
 
 set splitright
-command Bterm botright terminal
 
 " editing
 " ----------------------------------------------------------------------------
@@ -145,3 +147,7 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 " ----------------------------------------------------------------------------
 nmap <leader>p :FZF
 
+" Floaterm settings
+" ----------------------------------------------------------------------------
+let g:floaterm_keymap_toggle = '<leader>t'
+let g:floaterm_width = 0.9
