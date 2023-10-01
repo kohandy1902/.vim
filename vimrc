@@ -57,7 +57,7 @@ let mapleader=","
 
 " appearance
 " ----------------------------------------------------------------------------
-colorscheme onedark
+colorscheme nord
 
 syntax enable
 
