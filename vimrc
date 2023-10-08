@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
     Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'christoomey/vim-tmux-navigator'
 
 
     " Git
