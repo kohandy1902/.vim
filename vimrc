@@ -1,6 +1,6 @@
-" ============================================================================== 
+" ==============================================================================
 " vim-plug block
-" ============================================================================== 
+" ==============================================================================
 
 call plug#begin('~/.vim/plugged')
     " Editing
@@ -19,7 +19,7 @@ call plug#begin('~/.vim/plugged')
     " Git
     Plug 'tpope/vim-fugitive'
 
-    
+
     " Language
     Plug 'mattn/vim-lsp-settings'
     Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rhysd/vim-clang-format'
     Plug 'bfrg/vim-cpp-modern'
 
-    
+
     " Visual
     Plug 'junegunn/rainbow_parentheses.vim'
 
@@ -58,6 +58,12 @@ let mapleader=","
 
 " appearance
 " ----------------------------------------------------------------------------
+set nocompatible
+
+if has("termguicolors")
+    set termguicolors
+endif
+
 colorscheme nord
 
 syntax enable
@@ -105,9 +111,9 @@ nnoremap gV `[v`]
 inoremap jk <esc>
 
 
-" ============================================================================== 
+" ==============================================================================
 " plugin settings
-" ============================================================================== 
+" ==============================================================================
 
 " NERDTree settings
 " ----------------------------------------------------------------------------
