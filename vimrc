@@ -85,8 +85,7 @@ set shiftwidth=4
 set expandtab
 
 " tab settings for some extensions
-autocmd FileType yaml setlocal shiftwidth=2 softtabstop=2
-autocmd FileType scala setlocal shiftwidth=2 softtabstop=2
+autocmd FileType yaml,scala setlocal shiftwidth=2 softtabstop=2
 
 set incsearch
 set hlsearch
@@ -126,9 +125,10 @@ nmap <leader>l :bnext<cr>
 nmap <leader>h :bprevious<cr>
 nmap <leader>q :bp<bar> bd #<cr>
 
-
-" vim-lsp autocomplete settings
+" vim-lsp settings
 " ----------------------------------------------------------------------------
+nmap <leader>s :LspHover<cr>
+
 inoremap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<c-y>" : "\<cr>"
