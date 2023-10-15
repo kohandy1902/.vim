@@ -29,6 +29,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'rhysd/vim-clang-format'
     Plug 'bfrg/vim-cpp-modern'
 
+    Plug 'fatih/vim-go'
 
     " Visual
     Plug 'junegunn/rainbow_parentheses.vim'
@@ -139,12 +140,19 @@ inoremap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<c-y>" : "\<cr>"
 
+" vim-go settings
+" ----------------------------------------------------------------------------
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
 
 " rainbow parentheses settings
 " ----------------------------------------------------------------------------
 augroup rainbow_c
     autocmd!
-    autocmd FileType c,cpp,objc RainbowParentheses
+    autocmd FileType c,cpp,go RainbowParentheses
 augroup END
 
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
