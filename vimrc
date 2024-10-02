@@ -55,7 +55,8 @@ set viminfo+=n~/.vim/.viminfo
 " enable local config
 set exrc
 
-let mapleader=","
+nnoremap <space> <Nop>
+let mapleader=" "
 
 " appearance
 " ----------------------------------------------------------------------------
@@ -96,7 +97,8 @@ autocmd FileType yaml,scala setlocal shiftwidth=2 softtabstop=2
 
 set incsearch
 set hlsearch
-nnoremap <leader><space> :nohlsearch<cr>
+nnoremap <leader>0 :nohlsearch<cr>
+nnoremap , ciw
 
 " moves
 " ----------------------------------------------------------------------------
