@@ -66,7 +66,7 @@ if has("termguicolors")
     set termguicolors
 endif
 
-colorscheme nord
+colorscheme catppuccin_mocha
 
 syntax enable
 
